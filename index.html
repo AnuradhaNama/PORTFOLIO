@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1de434a4ca.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+        <div class="container">
+          <nav>
+            <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/adult-a-symbol-logo-icon-zey5o47-600.jpg" class="logo">
+            <ul id="sidemenu">
+              <li><a href="#header">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#Skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">contact</a></li>
+              <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+          <i class="fa-solid fa-bars" id="navigation" onclick="openmenu()"></i>
+          </nav>
+          <div class="header-text">
+            <p><span class="text"></span></p>
+            <h1>Hey, I am <span>ANURADHA NAMA</span><br> From india </h1>
+            <img src="anu.jpeg" class="profile-photo" alt="Anuradha Photo">
+          </div>
+        </div>
+      </div>
+      <!--- --------about---------- --->
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="WhatsApp Image 2023-08-21 at 6.49.33 AM.jpeg">
+            </div>
+              <div class="about-col-2">
+                <h1 class="sub-title">About <span>Me</span></h1>
+                <p>I am ANURADHA NAMA.currently i'm pursuing  B.Tech second year at KIET College.My field of study is Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning. I am interested in new technologies like machine learning ,
+                  Web Development,And my goal is to get a good job in reputed company.<br>In addition to my coursework we developed my skills in various programming languages like Python, C. HTML and CSS i'm currently on a leaming journey, dating into machine learning (ML), and expanding my knowledge with Java and Javascript.
+                  Im stillering but I'm eager to explore and grow in the ward of AI and ML.<br>I'm open to new opportunities and can't wait to see where this journey takes me....</br></p>
+              
+                  </p>
+                  
+                  <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                  </div>
+                  <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                      <li><span>Web development</span><br>WEB APP DEVELOPMENT</li>
+                      <li><span>Python Programming(basic)</span><br>PYTHON PROGRAMMING</li>
+                      <li><span>C language(basic)</span><br>C LANGUAGE</li>
+                    </ul>
+                  </div>
+                  <div class="tab-contents" id="education">
+                    <ul>
+                      <li><span>NOW STUDYING B-TECH IN KIET COLLEGE </span><br>2022-2026</li>
+                      <li><span>INTER FROM NARAYANA JUNIOR COLLEGE </span><br>2020-2022</li>
+                      <li><span>10TH FROM INDIAN PUBLIC SCHOOL </span><br>2019-2020</li>
+                    </ul>
+                  </div>
+                  <div class="tab-contents" id="hobbies">
+                    <ul>
+                      <li><span>TRAVELLING</span><br>Explore the hikes </li>
+                      <li><span>LISTING MUSIC</span><br>pleasant songs</li>
+                      <li><span>READING BOOKS</span><br>Reading real life story books<br></li>                      
+                    </ul>
+                  </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- --------------------Skills------------------- -->
+      <div id="Skills">
+        <div class="container">
+          <h1 class="sub-title">My <span>Skills</span></h1>
+          <div class="skills-list">
+            <div>
+              <i class="fa-solid fa-file-code"></i>
+              <h2>Web Development</h2>
+              <p>Web development refers to the creating, building, and maintaining of websites.
+                 It includes aspects such as web design, web publishing, web programming,
+                and database management. It is the creation of an application that works over the internet i.e. websites.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+              <i class="fa-brands fa-python"></i>
+              <h2>Python Programming</h2>
+              <p>Python is a computer programming language often used to build websites and software, 
+                automate tasks, and conduct data analysis. Python is a general-purpose language,
+                meaning it can be used to create a variety of different programs and isn't specialized for any specific problems.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+              <i class="fas fa-cogs"></i>
+              <h2>Machine Learning</h2>
+              <p>Machine learning has various uses across various industries and domains due to its ability to analyze and learn from data to make predictions, identify patterns, and automate tasks</p>
+                <a href="#">learn more</a>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+      <!-- --------------Projects------------------ -->
+      <div id="projects">
+        <div class="container">
+          <h1 class="sub-title">My <span>Work</span></h1>
+          <div class="work-list"> 
+            <div class="work">
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9vciUyMGNoaWxkfGVufDB8fDB8fHww">
+              <div class="layer">
+                <h3>NGO PROJECT</h3>
+                <p>Description: Here Our project name is NGO(Non-Governmental Organization) where we created a website to help the poor children with basic necessities like food,health,education<br>Here a video link to know better about our project</p>
+                  <a href="https://github.com/AnuradhaNama/PROJECT-NEST-1.git"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+            <div class="work">
+              <img src="https://www.infolks.info/blog/wp-content/uploads/2023/06/BLOG-IMAGE-02-1024x683.jpg">
+              <div class="layer">
+                <h3>EXPRESSION AND SIGN LANGUAGE DETECTION PROJECT</h3>
+                <p>Description: Expression and Sign language detection projects in machine learning offers to various domains, including assistive technology, human-computer interaction, and communication accessibility, facilitating better communication and understanding for individuals with diverse needs</p>
+                  <a href="https://github.com/AnuradhaNama/PROJECT-NEST-2.0.git"><i class="fa-solid fa-link"></i></a>
+              </div>
+          </div>
+
+          </div>
+              
+          <!-- ------------Contact Me---------- -->
+          <div id="contact">
+            <div class="container">
+               <div class="row">
+                <div class="contact-left">
+                  <h1 class="sub-title">Contact<span>Me!</span></h1>
+                  <p><i class="fa-solid fa-envelope"></i>anuradhachowdarynama@gmail.com</p>
+                  <p><i class="fa-solid fa-phone"></i>8074750638</p>
+                  <div class="social-icons">
+                    <a href="https://www.instagram.com/anuradha__nama?igsh=MTM3NXZ2Y2UyOHk3Yw=="><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/anuradha-nama-a77972289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/AnuradhaNama"><i class="fa-brands fa-brands fa-github"></i></a>
+                  </div>
+                  <a href="C:\Users\Anuradha Chowdary.LAPTOP-LV1V5LMT\Documents\ANURADHA.RESUME.docx" download class="btn btn2">Download Resume</a>
+               </div>
+               <div class="contact-right">
+               <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit"  class="btn btn2">Submit</button>
+               </form>
+               <span id="msg"></span>
+              </div>
+               </div>
+               </div>
+               <div class="copyright">
+                <p> Made With by @AnuradhaNama.<i class="fa-solid fa-heart"></i></p>
+               </div>
+               </div>
+               <!--------------------Scroll reveal------------------->
+               <script src="https://unpkg.com/scrollreveal"></script>
+
+              <!--------------------js typed------------------->
+              <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+              
+
+
+
+
+      <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+          for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+          }
+          for(tabcontent of tabcontents
+          ){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+      </script>
+      <script>
+        var sidemeu =document.getElementById("sidemenu")
+
+        function openmenu(){
+          sidemeu.style.right="0";
+        }
+        function closemenu(){
+          sidemeu.style.right="-200px";
+
+        }
+
+      </script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwp1tXUpdqx-M0WVIuLn1-JQmCou3m6XVZOd0Rym-METJFxUjvaPmRE0xfAMjPsSZoV9w/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+              msg.innerHTML = "Message sent successfully"
+              setTimeout(function(){
+                msg.innerHTML =""
+              },5000)
+              form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      <script>
+         ScrollReveal({
+           reset: true,
+           distance:'80px',
+           duration:2000,
+          delay:200
+          });
+
+          ScrollReveal().reveal('.header-text,.sub-title',{ origin: 'top' });
+          ScrollReveal().reveal('.profile-photo,.skills-list,.work-list,.contact-right,.contact-left',{ origin: 'bottom' });
+          ScrollReveal().reveal('.header-text h1,.about-col-1',{ origin: 'left' });
+          ScrollReveal().reveal('.header-text p,.about,.about-col-2',{ origin: 'right' });
+      </script>
+      <script>
+       const typed = new Typed('.text',{
+        strings:['Web Developer...','MACHINE ENGINER...'],
+        typeSpeed:100,
+        backSpeed:100,
+        backDelay:1000,
+        loop:true
+       });
+      </script>
+  </body>
+</html>
