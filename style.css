@@ -394,12 +394,30 @@ form .btn2{
 nav .fa-solid{
     display: none;
 }
+@media only screen and (max-width: 900px) {
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for smaller screens here */
+    .logo {
+        margin-left: -50px; /* Adjust as needed */
+    }
+    #navigation {
+        margin-left: 120px; /* Adjust as needed */
+        margin-top: -80px; /* Adjust as needed */
+    }
+    /* Add more styles as needed */
+}
+
+/* Add more media queries as needed for even smaller screens */
+
 @media only screen and (max-width: 900px){
     #header{
         background-image: url("vv.webp");
     }
     .profile-photo{
-        display: none;
+        display:grid;
     }
     .header-text{
         margin-top:100%;
