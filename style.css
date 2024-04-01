@@ -394,7 +394,7 @@ form .btn2{
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 900px){
     #header{
         background-image: url("vv.webp");
     }
