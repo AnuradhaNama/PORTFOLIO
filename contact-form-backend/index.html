@@ -177,7 +177,7 @@
           <!-- ------------Contact Me---------- -->
           <div id="contact">
             <div class="container">
-               <div class="row">
+              <div class="row">
                 <div class="contact-left">
                   <h1 class="sub-title">Contact<span> Me!</span></h1>
                   <p><i class="fa-solid fa-envelope"></i>anuradhachowdarynama@gmail.com</p>
@@ -188,15 +188,19 @@
                     <a href="https://github.com/AnuradhaNama"><i class="fa-brands fa-brands fa-github"></i></a>
                   </div>
                   <a href="file:///C:/Users/Anuradha%20Chowdary.LAPTOP-LV1V5LMT/Downloads/ANURADHA%20NAMA%20RESUME.pdf" download class="btn btn2">Download Resume</a>
-               </div>
-               <div class="contact-right">
-               <form name="submit-to-google-sheet">
-                <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your email" required>
-                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button type="submit"  class="btn btn2">Submit</button>
-               </form>
-               <span id="msg"></span>
+                </div>
+                <div class="contact-right">
+                  <form id="contactForm">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                  </form>
+                  <span id="msg"></span>
+                </div>
+              </div>
+            </div>
+          </div>
               </div>
                </div>
                </div>
@@ -243,22 +247,39 @@
 
       </script>
       <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwp1tXUpdqx-M0WVIuLn1-JQmCou3m6XVZOd0Rym-METJFxUjvaPmRE0xfAMjPsSZoV9w/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-              msg.innerHTML = "Message sent successfully"
-              setTimeout(function(){
-                msg.innerHTML =""
-              },5000)
-              form.reset()
+document.getElementById('contactForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+          const response = await fetch('http://localhost:3000/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: data.Name,
+              email: data.Email,
+              message: data.Message
             })
-            .catch(error => console.error('Error!', error.message))
-        })
+          });
+
+          if (response.ok) {
+            document.getElementById('msg').innerText = "Message sent successfully";
+            setTimeout(() => {
+              document.getElementById('msg').innerText = "";
+            }, 5000);
+            event.target.reset();
+          } else {
+            document.getElementById('msg').innerText = "Failed to submit message";
+          }
+        } catch (error) {
+          console.error('Error!', error.message);
+          document.getElementById('msg').innerText = "An error occurred while submitting the form";
+        }
+      });
       </script>
       <script>
          ScrollReveal({
